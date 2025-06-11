@@ -1,0 +1,84 @@
+@font-face {
+  font-family: "norsebold";
+  src: url("../src/font/norse-bold-webfont.woff2") format("woff2"),
+    url("../src/font/norse-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  line-height: 1.5rem;
+}
+
+body {
+  height: 100vh;
+  outline: 1px solid red;
+  display: flex;
+  --side-width: 34.8vw;
+}
+
+.side-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background: linear-gradient(to top, #0a2027, #596d48);
+  /* background: center / cover no-repeat url(/src/img/background.jpg); */
+  width: var(--side-width);
+  padding-top: 120px;
+
+  color: white;
+  .img-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+
+    background-color: rgba(0, 0, 0, 0.429);
+    font-size: 65px;
+    font-family: norsebold;
+
+    img {
+      height: 90%;
+    }
+  }
+
+  .credits-div {
+    padding: 10px 0;
+    font-size: 10px;
+    text-align: center;
+    a {
+      color: inherit;
+    }
+  }
+}
+
+main {
+  --left-padding: 50px;
+  width: calc(100vw - var(--side-width));
+  height: 100vh;
+  background-color: #f9fafb;
+  border: 1px solid red;
+
+  overflow: hidden auto;
+  padding-left: var(--left-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & > * {
+    height: fit-content;
+    border: 4px solid rebeccapurple;
+    width: 200px;
+    & > * {
+      border: 1px solid cyan;
+      background-color: #596d48;
+      height: 100px;
+      width: 100px;
+    }
+  }
+}
+
+main:has(:first-child:not(:last-child)) {
+  justify-content: flex-start;
+}
