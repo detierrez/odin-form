@@ -12,6 +12,7 @@
         <div class="img-div">
             <img src="/src/img/odin-lined.png" alt="odin logo">
             ODIN
+
         </div>
         <div class="credits-div">
             Photo by
@@ -21,16 +22,65 @@
         </div>
     </div>
     <main>
-
-
         <div class="layout-wrapper">
-            <section>Section1</section>
-            <section>Section2</section>
+            <section class="description">
+                <p>
+                    This is not a real online service! You know you need something like this in your life to help you
+                    realize your deepest dreams. Sign up <em>now</em> to get started.
+                </p>
+                <p>
+                    You <em>know</em> you want to.
+                </p>
+            </section>
+            <section class="form">
+                <h2>Let's do this!</h2>
+                <form action="#" id="form-sign-up">
+                    <div class="form-field">
+                        <label for="first_name">FIRST NAME<span aria-label="required">*</span></label>
+                        <input type="text" name="first_name" id="first_name" placeholder="John" required>
+                        <div class="msg-invalid msg-required">First name is required</div>
+                    </div>
+                    <div class="form-field">
+                        <label for="last_name">LAST NAME<span aria-label="required">*</span></label>
+                        <input type="text" name="last_name" id="last_name" placeholder="Doe" required>
+                        <div class="msg-invalid msg-required">Last name is required</div>
+                    </div>
+                    <div class="form-field">
+                        <label for="email">EMAIL<span aria-label="required">*</span></label>
+                        <input type="email" name="email" id="email" placeholder="example@email.com" required>
+                        <div class="msg-invalid msg-required">An email is required</div>
+                        <div class="msg-invalid msg-format">Email format is not valid</div>
+                    </div>
+                    <div class="form-field">
+                        <label for="phone_number">PHONE NUMBER</label>
+                        <input type="tel" name="phone_number" placeholder="123456789" id="phone_number"
+                            pattern="\d{8,9}">
+                        <div class="msg-invalid msg-format">Number must be between 8 and 9 digits</div>
+                    </div>
+                    <div class="form-field">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" name="password" id="password" placeholder="••••••••"
+                            pattern="[a-zA-Z0-9]{8,16}" required>
+                        <div class="msg-invalid msg-required">A password is required</div>
+                        <div class="msg-invalid msg-format">Must be 8 to 16 characters long</div>
+                        <div class="msg-invalid msg-format">Must contain only: lowercase letters, uppercase
+                            letters or numbers</div>
+                    </div>
+                    <div class="form-field">
+                        <label for="confirm_password">CONFIRM PASSWORD</label>
+                        <input type="password" name="confirm_password" id="confirm_password" placeholder="••••••••"
+                            pattern="[a-zA-Z0-9]{8,16}" required>
+                        <div class="msg-invalid msg-required">Please confirm the password</div>
+                        <div class="msg-invalid msg-format">Password doesn't match</div>
+                    </div>
+                </form>
+            </section>
+            <section class="submit">
+                <button type="submit" form="form-sign-up">Create Account</button>
+                <p>Already have an account? <a href="#">Log in</a></p>
+            </section>
         </div>
 
     </main>
-
-
-
 </body>
 </html>
