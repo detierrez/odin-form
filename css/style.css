@@ -26,8 +26,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
-  background: linear-gradient(to top, #0a2027, #596d48);
-  background: center / cover no-repeat url(/src/img/background.jpg);
+  background: center / cover no-repeat url(../src/img/background.jpg);
   width: var(--side-width);
   padding-top: 120px;
 
