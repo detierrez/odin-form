@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign up</title>
+    <link href="/src/font/norse-bold-webfont.woff2" type="font/woff2" rel="preload" as="font" crossorigin>
+    <link rel="preload" as="image" href="/src/img/background.jpg">
     <link rel="stylesheet" href="css/modern-normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -53,25 +55,25 @@
                     </div>
                     <div class="form-field">
                         <label for="phone_number">PHONE NUMBER</label>
-                        <input type="tel" name="phone_number" placeholder="123456789" id="phone_number"
+                        <input type="tel" name="phone_number" placeholder="987654321" id="phone_number"
                             pattern="\d{8,9}">
                         <div class="msg-invalid msg-format">Number must be between 8 and 9 digits</div>
                     </div>
                     <div class="form-field">
-                        <label for="password">PASSWORD</label>
+                        <label for="password">PASSWORD<span aria-label="required">*</span></label>
                         <input type="password" name="password" id="password" placeholder="••••••••"
                             pattern="[a-zA-Z0-9]{8,16}" required>
                         <div class="msg-invalid msg-required">A password is required</div>
                         <div class="msg-invalid msg-format">Must be 8 to 16 characters long</div>
-                        <div class="msg-invalid msg-format">Must contain only: lowercase letters, uppercase
+                        <div class="msg-invalid msg-format">Must only contain lowercase letters, uppercase
                             letters or numbers</div>
                     </div>
                     <div class="form-field">
-                        <label for="confirm_password">CONFIRM PASSWORD</label>
+                        <label for="confirm_password">CONFIRM PASSWORD<span aria-label="required">*</span></label>
                         <input type="password" name="confirm_password" id="confirm_password" placeholder="••••••••"
                             pattern="[a-zA-Z0-9]{8,16}" required>
                         <div class="msg-invalid msg-required">Please confirm the password</div>
-                        <div class="msg-invalid msg-format">Password doesn't match</div>
+                        <div class="msg-invalid msg-format">Doesn't match the password</div>
                     </div>
                 </form>
             </section>

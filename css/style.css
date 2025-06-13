@@ -6,10 +6,6 @@
   font-style: normal;
 }
 
-* {
-  /* outline: 1px solid black; */
-}
-
 html {
   line-height: 1.5rem;
 }
@@ -31,7 +27,7 @@ body {
   justify-content: space-between;
 
   background: linear-gradient(to top, #0a2027, #596d48);
-  /* background: center / cover no-repeat url(/src/img/background.jpg); */
+  background: center / cover no-repeat url(/src/img/background.jpg);
   width: var(--side-width);
   padding-top: 120px;
 
@@ -126,9 +122,10 @@ main {
           input {
             padding: 3px 9px;
             width: 100%;
-            border-radius: 0.2rem;
+            border-radius: 0.2em;
             border: 1px solid #e5e7eb;
-            font-size: 1rem;
+            font-size: 0.85rem;
+            height: 1.65rem;
 
             &:user-invalid {
               border: 1px solid var(--invalid-color);
@@ -197,8 +194,3 @@ main {
     }
   }
 }
-
-/* :not(:has(.form)):not(.form):not(.form *) {
-  border: 1px solid red;
-  visibility: hidden;
-} */
